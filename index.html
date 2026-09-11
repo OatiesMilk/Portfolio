@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dylan Akia — Full-Stack Web Developer</title>
+  <meta name="description" content="Portfolio of Dylan Akia, a full-stack web developer specializing in clean, responsive web applications with HTML, CSS, JavaScript, and Python.">
+  <meta name="author" content="Dylan Akia">
+
+  <!-- Open Graph / social preview tags -->
+  <meta property="og:title" content="Dylan Akia — Full-Stack Web Developer">
+  <meta property="og:description" content="Portfolio showcasing projects, skills, and experience of Dylan Akia, a full-stack web developer.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">Dylan<span>.</span>Akia</a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-navigation" class="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero / Home -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Hi, my name is</p>
+          <h1 id="hero-heading">Dylan Akia</h1>
+          <p class="hero-title">Full-Stack Web Developer</p>
+          <p class="hero-description">
+            I build clean, responsive, and fast websites and web apps. I enjoy turning
+            ideas into simple, usable interfaces — from the first line of HTML to a
+            deployed, working product.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Illustrated profile avatar of Dylan Akia" class="avatar">
+            <circle cx="100" cy="100" r="100" fill="var(--primary-color)"/>
+            <circle cx="100" cy="82" r="34" fill="#fff" opacity="0.9"/>
+            <path d="M40 172c8-38 40-58 60-58s52 20 60 58" fill="#fff" opacity="0.9"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a full-stack web developer with a passion for building web
+              applications that are simple to use and easy to maintain. I studied
+              Information Technology and have spent the last few years working on
+              projects that range from small business websites to internal tools that
+              automate repetitive work.
+            </p>
+            <p>
+              My goal is to keep growing as a developer by working on projects that
+              solve real problems, while writing code that the next person (often
+              future me) can understand at a glance. I care about clean UI, accessible
+              markup, and code that doesn't need a manual to modify.
+            </p>
+            <p>
+              Outside of coding, I enjoy exploring UI/UX design trends, contributing to
+              small open-source tools, and continuously learning new parts of the web
+              platform.
+            </p>
+          </div>
+          <ul class="interest-tags" aria-label="Personal interests">
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>Open Source</li>
+            <li>Automation</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title">Skills</h2>
+        <ul class="skills-grid">
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">&lt;/&gt;</span>
+            <h3>HTML</h3>
+            <div class="skill-bar"><span style="width: 95%;"></span></div>
+          </li>
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">🎨</span>
+            <h3>CSS</h3>
+            <div class="skill-bar"><span style="width: 90%;"></span></div>
+          </li>
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">⚡</span>
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><span style="width: 85%;"></span></div>
+          </li>
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">🐍</span>
+            <h3>Python</h3>
+            <div class="skill-bar"><span style="width: 80%;"></span></div>
+          </li>
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">🌿</span>
+            <h3>Git</h3>
+            <div class="skill-bar"><span style="width: 88%;"></span></div>
+          </li>
+          <li class="skill-card">
+            <span class="skill-icon" aria-hidden="true">🧩</span>
+            <h3>UI/UX</h3>
+            <div class="skill-bar"><span style="width: 78%;"></span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-title">Projects</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <div class="project-image" aria-hidden="true">
+              <svg viewBox="0 0 400 220" role="presentation">
+                <rect width="400" height="220" fill="#dbeafe"/>
+                <rect x="40" y="60" width="320" height="100" rx="8" fill="#2563eb" opacity="0.85"/>
+                <circle cx="80" cy="90" r="10" fill="#fff"/>
+                <rect x="110" y="83" width="220" height="14" rx="4" fill="#fff" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Task Manager App</h3>
+              <p>
+                A responsive to-do list application with drag-and-drop task ordering,
+                local storage persistence, and category filters.
+              </p>
+              <ul class="tech-tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://example.com/" class="btn btn-text" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-card">
+            <div class="project-image" aria-hidden="true">
+              <svg viewBox="0 0 400 220" role="presentation">
+                <rect width="400" height="220" fill="#dcfce7"/>
+                <rect x="40" y="40" width="140" height="140" rx="8" fill="#16a34a" opacity="0.85"/>
+                <rect x="200" y="40" width="160" height="65" rx="8" fill="#16a34a" opacity="0.6"/>
+                <rect x="200" y="115" width="160" height="65" rx="8" fill="#16a34a" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Expense Tracker</h3>
+              <p>
+                A budgeting tool built with Python (Flask) that lets users log expenses,
+                categorize spending, and view simple monthly summaries.
+              </p>
+              <ul class="tech-tags">
+                <li>Python</li><li>Flask</li><li>SQLite</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://example.com/" class="btn btn-text" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-card">
+            <div class="project-image" aria-hidden="true">
+              <svg viewBox="0 0 400 220" role="presentation">
+                <rect width="400" height="220" fill="#fef3c7"/>
+                <circle cx="120" cy="110" r="55" fill="#d97706" opacity="0.8"/>
+                <rect x="210" y="70" width="150" height="16" rx="8" fill="#d97706" opacity="0.6"/>
+                <rect x="210" y="100" width="120" height="16" rx="8" fill="#d97706" opacity="0.4"/>
+                <rect x="210" y="130" width="90" height="16" rx="8" fill="#d97706" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Recipe Finder</h3>
+              <p>
+                A recipe search site that queries a public recipe API, with search,
+                filtering by ingredient, and a saved-favorites list using local storage.
+              </p>
+              <ul class="tech-tags">
+                <li>JavaScript</li><li>REST API</li><li>CSS Grid</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://example.com/" class="btn btn-text" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education / Experience -->
+    <section id="education" class="section section-alt" aria-labelledby="education-heading">
+      <div class="container">
+        <h2 id="education-heading" class="section-title">Education &amp; Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — Present</span>
+              <h3>Freelance Web Developer</h3>
+              <p>
+                Designing and building responsive websites for small businesses,
+                focusing on performance, accessibility, and easy content updates for
+                non-technical clients.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2020 — 2024</span>
+              <h3>B.S. in Information Technology</h3>
+              <p>
+                De La Salle University. Coursework in web systems, databases, and
+                software engineering; capstone project on a campus resource
+                booking system.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 (Internship)</span>
+              <h3>Software Engineering Intern</h3>
+              <p>
+                Contributed to internal tooling, fixed frontend bugs, and wrote
+                documentation for onboarding new engineers.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p>
+              Have a project in mind or just want to say hello? My inbox is always open.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Email</span>
+                <a href="mailto:dylanakia2002@gmail.com">dylanakia2002@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-label">Location</span>
+                <span>Manila, Philippines</span>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/dylanakia</a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dylanakia</a>
+              </li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <p class="form-note">
+              This form is a frontend-only demo — it validates your input but does not
+              send data anywhere yet. Connect a backend or a service like Formspree to
+              enable real submissions.
+            </p>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
+              <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year"></span> Dylan Akia. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
+        <li><a href="mailto:dylanakia2002@gmail.com" aria-label="Send an email">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll back to top" hidden>&uarr;</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

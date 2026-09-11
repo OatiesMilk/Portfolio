@@ -363,49 +363,42 @@ button {
 /* ==========================================================================
    Skills
    ========================================================================== */
-.skills-grid {
+.skills-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.skill-card {
+.skill-group {
   background-color: var(--surface-color);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 1.5rem;
-  text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.skill-card:hover {
+.skill-group:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
 }
 
-.skill-icon {
-  display: inline-block;
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.skill-card h3 {
+.skill-group h3 {
   font-size: 1.05rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
 }
 
-.skill-bar {
-  height: 6px;
-  background-color: var(--border-color);
-  border-radius: 999px;
-  overflow: hidden;
+.soft-skills {
+  text-align: center;
 }
 
-.skill-bar span {
-  display: block;
-  height: 100%;
-  background-color: var(--primary-color);
-  border-radius: 999px;
+.soft-skills h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+
+.soft-skills .tech-tags {
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -447,6 +440,14 @@ button {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.project-meta {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.35rem;
 }
 
 .tech-tags {
@@ -519,6 +520,12 @@ button {
 .timeline-content p {
   color: var(--text-muted);
   margin-bottom: 0;
+}
+
+.timeline-content .btn-text {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding-left: 0;
 }
 
 /* ==========================================================================

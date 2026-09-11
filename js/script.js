@@ -152,6 +152,24 @@ contactForm.addEventListener('submit', (event) => {
 });
 
 // ==========================================================================
+// Scroll-reveal on section content (CSS handles prefers-reduced-motion)
+// ==========================================================================
+const revealElements = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
+
+// ==========================================================================
 // Footer year
 // ==========================================================================
 document.getElementById('current-year').textContent = new Date().getFullYear();

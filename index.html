@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dylan Akia — BS IT Student & Full-Stack Developer</title>
-  <meta name="description" content="Portfolio of Dylan Akia, a BS Information Technology student at De La Salle University - Manila, building full-stack web applications, cloud, and network projects with Laravel, PHP, AWS, and Cisco Packet Tracer.">
+  <title>Dylan Akia — BS IT Student</title>
+  <meta name="description" content="Portfolio of Dylan Akia, a BS Information Technology student at De La Salle University - Manila, building web, cloud, and network projects with Laravel, PHP, AWS, and Cisco Packet Tracer.">
   <meta name="author" content="Dylan Lee B. Akia">
 
   <!-- Open Graph / social preview tags -->
   <meta property="og:title" content="Dylan Akia (Portfolio)">
-  <meta property="og:description" content="Portfolio showcasing the projects, skills, and experience of Dylan Akia, a BS IT student and full-stack developer.">
+  <meta property="og:description" content="Portfolio showcasing the projects, skills, and experience of Dylan Akia, a BS IT student.">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -65,15 +70,20 @@
             <a href="#contact" class="btn btn-secondary">Contact Me</a>
           </div>
         </div>
-        <img src="assets/images/profile_picture.jpg" alt="Profile Picture" class="avatar">
+        <div class="hero-photo">
+          <img src="assets/images/profile_picture.jpg" alt="Profile Picture" class="avatar">
+        </div>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container">
-        <h2 id="about-heading" class="section-title">About Me</h2>
-        <div class="about-grid">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">01 — About</span>
+          <h2 id="about-heading">About Me</h2>
+        </div>
+        <div class="about-grid reveal">
           <div class="about-text">
             <p>
               I'm a BS Information Technology student at De La Salle University -
@@ -96,12 +106,28 @@
               AWS Cloud Quest).
             </p>
           </div>
-          <ul class="interest-tags" aria-label="Personal interests">
-            <li>Network Infrastructure</li>
-            <li>Web Development</li>
-            <li>Business Analysis</li>
-            <li>Cloud Services</li>
-          </ul>
+          <div class="about-side">
+            <ul class="tag-list" aria-label="Personal interests">
+              <li>Network Infrastructure</li>
+              <li>Web Development</li>
+              <li>Business Analysis</li>
+              <li>Cloud Services</li>
+            </ul>
+            <ul class="about-stats">
+              <li>
+                <span class="stat-value">3</span>
+                <span class="stat-label">Projects shipped</span>
+              </li>
+              <li>
+                <span class="stat-value">3</span>
+                <span class="stat-label">Certifications earned</span>
+              </li>
+              <li>
+                <span class="stat-value">2021</span>
+                <span class="stat-label">Started at DLSU</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -109,36 +135,39 @@
     <!-- Skills -->
     <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
       <div class="container">
-        <h2 id="skills-heading" class="section-title">Skills</h2>
-        <div class="skills-groups">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">02 — Skills</span>
+          <h2 id="skills-heading">Skills</h2>
+        </div>
+        <div class="skills-index reveal">
           <div class="skill-group">
-            <h3>Programming Languages</h3>
-            <ul class="tech-tags">
+            <span class="skill-group-label">Programming Languages</span>
+            <ul class="tag-list">
               <li>PHP</li><li>Python</li><li>SQL</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Web Development</h3>
-            <ul class="tech-tags">
+            <span class="skill-group-label">Web Development</span>
+            <ul class="tag-list">
               <li>Laravel</li><li>HTML</li><li>CSS</li><li>Tailwind</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Cloud Computing</h3>
-            <ul class="tech-tags">
+            <span class="skill-group-label">Cloud Computing</span>
+            <ul class="tag-list">
               <li>AWS</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Tools</h3>
-            <ul class="tech-tags">
+            <span class="skill-group-label">Tools</span>
+            <ul class="tag-list">
               <li>GitHub</li><li>MySQL</li><li>Figma</li><li>Cisco Packet Tracer</li>
             </ul>
           </div>
         </div>
-        <div class="soft-skills">
-          <h3>Soft Skills</h3>
-          <ul class="tech-tags">
+        <div class="soft-skills reveal">
+          <span class="skill-group-label">Soft Skills</span>
+          <ul class="tag-list">
             <li>Analytical Thinking</li><li>Problem-Solving</li><li>Team Collaboration</li>
           </ul>
         </div>
@@ -148,18 +177,22 @@
     <!-- Projects -->
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <div class="container">
-        <h2 id="projects-heading" class="section-title">Projects</h2>
-        <ul class="projects-grid">
-          <li class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 400 220" role="presentation">
-                <rect width="400" height="220" fill="#dbeafe"/>
-                <rect x="40" y="60" width="320" height="100" rx="8" fill="#2563eb" opacity="0.85"/>
-                <circle cx="80" cy="90" r="10" fill="#fff"/>
-                <rect x="110" y="83" width="220" height="14" rx="4" fill="#fff" opacity="0.8"/>
+        <div class="section-header reveal">
+          <span class="section-eyebrow">03 — Projects</span>
+          <h2 id="projects-heading">Projects</h2>
+        </div>
+        <ul class="project-rows">
+          <li class="project-row reveal">
+            <div class="project-media" aria-hidden="true">
+              <svg viewBox="0 0 400 300" role="presentation">
+                <rect width="400" height="300" fill="#dbeafe"/>
+                <rect x="40" y="80" width="320" height="140" rx="8" fill="#0f766e" opacity="0.85"/>
+                <circle cx="80" cy="110" r="10" fill="#fff"/>
+                <rect x="110" y="103" width="220" height="14" rx="4" fill="#fff" opacity="0.8"/>
               </svg>
             </div>
-            <div class="project-body">
+            <div class="project-copy">
+              <span class="project-index">01</span>
               <span class="project-meta">Human Computer Interaction &middot; Term 2 AY 2024&ndash;2025</span>
               <h3>Discord Redesign UI/UX</h3>
               <p>
@@ -168,54 +201,52 @@
                 and interactive prototypes focused on streamlined navigation and a
                 modernized aesthetic.
               </p>
-              <ul class="tech-tags">
+              <ul class="tag-list">
                 <li>Figma</li><li>UI/UX Design</li><li>Prototyping</li>
               </ul>
-              <div class="project-links">
-                <a href="https://www.figma.com/proto/CwmJedF27RuknxyJGYKr2e/MCO3-Draft?node-id=133-742&t=rfWGg7PMf1ooJlQC-1" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Prototype</a>
-              </div>
+              <a href="https://www.figma.com/proto/CwmJedF27RuknxyJGYKr2e/MCO3-Draft?node-id=133-742&t=rfWGg7PMf1ooJlQC-1" class="project-link" target="_blank" rel="noopener noreferrer">View Prototype &rarr;</a>
             </div>
           </li>
 
-          <li class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 400 220" role="presentation">
-                <rect width="400" height="220" fill="#dcfce7"/>
-                <rect x="40" y="40" width="140" height="140" rx="8" fill="#16a34a" opacity="0.85"/>
-                <rect x="200" y="40" width="160" height="65" rx="8" fill="#16a34a" opacity="0.6"/>
-                <rect x="200" y="115" width="160" height="65" rx="8" fill="#16a34a" opacity="0.6"/>
+          <li class="project-row reveal">
+            <div class="project-media" aria-hidden="true">
+              <svg viewBox="0 0 400 300" role="presentation">
+                <rect width="400" height="300" fill="#dcfce7"/>
+                <rect x="40" y="60" width="140" height="180" rx="8" fill="#0f766e" opacity="0.85"/>
+                <rect x="200" y="60" width="160" height="85" rx="8" fill="#0f766e" opacity="0.6"/>
+                <rect x="200" y="155" width="160" height="85" rx="8" fill="#0f766e" opacity="0.6"/>
               </svg>
             </div>
-            <div class="project-body">
+            <div class="project-copy">
+              <span class="project-index">02</span>
               <span class="project-meta">WAN Connectivity &middot; Term 3 AY 2024&ndash;2025</span>
               <h3>AnimoTech Inc. Network Design</h3>
               <p>
                 Designed and implemented a simulation of a multi-site network
                 infrastructure connecting Manila, BGC, and Laguna branches using
-                site-to-site VPNs for secure WAN connectivity. Produced detailed network
-                documentation, including topology diagrams, security policy matrices,
-                and proof-of-concept testing for access controls.
+                site-to-site VPNs for secure WAN connectivity. Produced detailed
+                network documentation, including topology diagrams, security policy
+                matrices, and proof-of-concept testing for access controls.
               </p>
-              <ul class="tech-tags">
+              <ul class="tag-list">
                 <li>Cisco Packet Tracer</li><li>VPN</li><li>Network Design</li>
               </ul>
-              <div class="project-links">
-                <a href="https://drive.google.com/file/d/1jyKT9H23XeuObqgAsCYMouSDarykvPvh/view?usp=sharing" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Documentation</a>
-              </div>
+              <a href="https://drive.google.com/file/d/1jyKT9H23XeuObqgAsCYMouSDarykvPvh/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Documentation &rarr;</a>
             </div>
           </li>
 
-          <li class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 400 220" role="presentation">
-                <rect width="400" height="220" fill="#fef3c7"/>
-                <circle cx="120" cy="110" r="55" fill="#d97706" opacity="0.8"/>
-                <rect x="210" y="70" width="150" height="16" rx="8" fill="#d97706" opacity="0.6"/>
-                <rect x="210" y="100" width="120" height="16" rx="8" fill="#d97706" opacity="0.4"/>
-                <rect x="210" y="130" width="90" height="16" rx="8" fill="#d97706" opacity="0.3"/>
+          <li class="project-row reveal">
+            <div class="project-media" aria-hidden="true">
+              <svg viewBox="0 0 400 300" role="presentation">
+                <rect width="400" height="300" fill="#fef3c7"/>
+                <circle cx="120" cy="150" r="65" fill="#c2681a" opacity="0.8"/>
+                <rect x="210" y="105" width="150" height="16" rx="8" fill="#c2681a" opacity="0.6"/>
+                <rect x="210" y="140" width="120" height="16" rx="8" fill="#c2681a" opacity="0.4"/>
+                <rect x="210" y="175" width="90" height="16" rx="8" fill="#c2681a" opacity="0.3"/>
               </svg>
             </div>
-            <div class="project-body">
+            <div class="project-copy">
+              <span class="project-index">03</span>
               <span class="project-meta">Web and AI System Development &middot; January 2026&ndash;Present</span>
               <h3>AI Quality Inspection</h3>
               <p>
@@ -225,12 +256,10 @@
                 Managers, Admins, and Shoe Constructors, and integrated a computer
                 vision ingestion API with Laravel Sanctum.
               </p>
-              <ul class="tech-tags">
+              <ul class="tag-list">
                 <li>Laravel</li><li>YOLO</li><li>Computer Vision</li><li>Laravel Sanctum</li>
               </ul>
-              <div class="project-links">
-                <a href="https://github.com/OatiesMilk/AI-System-for-Quality-Inspection" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
+              <a href="https://github.com/OatiesMilk/AI-System-for-Quality-Inspection" class="project-link" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
             </div>
           </li>
         </ul>
@@ -240,53 +269,51 @@
     <!-- Education / Experience -->
     <section id="education" class="section section-alt" aria-labelledby="education-heading">
       <div class="container">
-        <h2 id="education-heading" class="section-title">Education &amp; Experience</h2>
-        <ol class="timeline">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 — Education &amp; Experience</span>
+          <h2 id="education-heading">Education &amp; Experience</h2>
+        </div>
+        <ol class="timeline reveal">
           <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
               <span class="timeline-date">December 2, 2025</span>
               <h3>Event Organizer — 2025 PHILED Conference</h3>
               <p>
-                Education Technology Providers Association of the Philippines.
-                Registered attendees and managed check-in, represented RaksoCT and
-                promoted its education technology products, and supported general
-                event organization and on-site coordination.
+                Registered attendees and managed check-in at the venue entrance.
+                Represented RaksoCT and promoted its education technology products to
+                conference attendees, and supported general event organization and
+                on-site coordination.
               </p>
             </div>
           </li>
           <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
               <span class="timeline-date">November 11, 2025</span>
               <h3>AWS Academy Graduate — Cloud Foundations</h3>
-              <p>Certification covering core AWS cloud concepts, services, and best practices.</p>
-              <a href="https://www.credly.com/badges/e43e073c-1d2e-49d6-97bc-ea11374dd665/public_url" class="btn btn-text" target="_blank" rel="noopener noreferrer">View Credential</a>
+              <p>Certification covering core cloud computing foundations through AWS Academy.</p>
+              <a href="https://www.credly.com/badges/e43e073c-1d2e-49d6-97bc-ea11374dd665/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
             </div>
           </li>
           <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
               <span class="timeline-date">October 4, 2025</span>
               <h3>AWS Cloud Quest: Cloud Practitioner</h3>
-              <p>Hands-on certification game covering foundational AWS cloud practitioner skills.</p>
-              <a href="https://www.credly.com/badges/5cd3c038-7e81-4d15-a219-0a3e3f4ff37d/public_url" class="btn btn-text" target="_blank" rel="noopener noreferrer">View Credential</a>
+              <p>Certification covering core AWS cloud practitioner concepts and services.</p>
+              <a href="https://www.credly.com/badges/5cd3c038-7e81-4d15-a219-0a3e3f4ff37d/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
             </div>
           </li>
           <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
               <span class="timeline-date">September 1, 2025</span>
               <h3>CCNA: Enterprise Networking, Security, and Automation</h3>
-              <p>Cisco certification covering enterprise network design, security, and automation.</p>
-              <a href="https://www.credly.com/badges/4f03304b-5486-4293-b961-770821b0233a/public_url" class="btn btn-text" target="_blank" rel="noopener noreferrer">View Credential</a>
+              <p>Certification in enterprise networking, security, and network automation.</p>
+              <a href="https://www.credly.com/badges/4f03304b-5486-4293-b961-770821b0233a/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
             </div>
           </li>
           <li class="timeline-item">
-            <div class="timeline-marker" aria-hidden="true"></div>
             <div class="timeline-content">
-              <span class="timeline-date">September 2021 — Present</span>
-              <h3>B.S. in Information Technology</h3>
+              <span class="timeline-date">September 2021 &ndash; Present</span>
+              <h3>BS in Information Technology</h3>
               <p>
                 De La Salle University - Manila. Coursework and projects spanning
                 full-stack web development, cloud computing, and network engineering.
@@ -298,19 +325,19 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section" aria-labelledby="contact-heading">
+    <section id="contact" class="section section-dark" aria-labelledby="contact-heading">
       <div class="container">
-        <h2 id="contact-heading" class="section-title">Contact</h2>
-        <div class="contact-grid">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">05 — Contact</span>
+          <h2 id="contact-heading">Let's Build Something</h2>
+        </div>
+        <div class="contact-grid reveal">
           <div class="contact-info">
             <p>
               Have a project in mind or just want to say hello? My inbox is always open.
             </p>
+            <a class="contact-email" href="mailto:dylanakia2002@gmail.com">dylanakia2002@gmail.com</a>
             <ul class="contact-list">
-              <li>
-                <span class="contact-label">Email</span>
-                <a href="mailto:dylanakia2002@gmail.com">dylanakia2002@gmail.com</a>
-              </li>
               <li>
                 <span class="contact-label">Phone</span>
                 <a href="tel:+639999946734">0999 994 6734</a>

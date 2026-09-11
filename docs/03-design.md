@@ -141,3 +141,45 @@ portfolio/
 - Form fields use associated `<label for>` and `aria-describedby` for error text.
 - Focus-visible outlines are never removed, only restyled.
 - Color palette checked for WCAG AA contrast (see testing doc).
+
+## 8. Visual Identity Redesign — "Blueprint Grotesk"
+
+The original visual design (centered hero, `#2563eb` blue accent, boxed cards with
+soft shadows, centered section titles) read as a generic template. It was replaced
+with a technical-editorial identity that nods to the site owner's networking/cloud/
+systems background without being a literal network-diagram gimmick.
+
+**Signature moves**
+- Numbered, monospace section eyebrows ("01 — About", "02 — Skills", ...) with
+  left-aligned headings and a thin rule, replacing centered titles with an underline bar.
+- A subtle CSS-only dot-grid "blueprint" background behind the hero.
+- Hero photo in an offset accent-bordered frame, replacing the soft-shadow circle avatar.
+- Projects shown as alternating full-width editorial rows (image/copy swapping sides
+  via `nth-child(even)`) instead of a uniform 3-card grid.
+- Skills shown as a categorized tag index instead of boxed cards with invented
+  proficiency bars.
+- Contact rebuilt as a confident dark closing band with a large email link, instead
+  of a plain boxed form section.
+
+**Color tokens**
+
+| Token | Value | Use |
+|---|---|---|
+| `--ink` | `#12161c` | Primary text, dark bands (footer, contact) |
+| `--paper` | `#faf9f6` | Page background |
+| `--surface` | `#ffffff` | Cards/elevated surfaces |
+| `--accent` | `#0f766e` (teal-700) | Primary accent — links, CTAs, markers |
+| `--warm` | `#c2681a` | Secondary accent, used sparingly |
+| `--text-muted` | `#5b6472` | Secondary text |
+| `--border` | `#e4e1da` | Warm-neutral borders/rules |
+
+All ink-on-paper and accent-on-paper pairings clear WCAG AA for body text and UI
+components.
+
+**Typography** — Space Grotesk (headings/display), Inter (body), JetBrains Mono
+(eyebrows, dates, tags) — loaded via a single Google Fonts request with only the
+weights used, to protect load performance.
+
+**Motion** — a small `IntersectionObserver`-driven fade/slide-up reveal on section
+content (`js/script.js`), neutralized for `prefers-reduced-motion: reduce` entirely
+in CSS so it degrades safely without needing a JS feature check.

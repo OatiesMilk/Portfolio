@@ -1,4 +1,29 @@
 // ==========================================================================
+// Dark mode toggle (persisted in localStorage; defaults to system preference —
+// the initial theme is already set by the inline script in <head> to avoid a
+// flash of the wrong theme on load)
+// ==========================================================================
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleIcon = themeToggle.querySelector('span');
+const htmlRoot = document.documentElement;
+
+function updateThemeToggle(theme) {
+  const isDark = theme === 'dark';
+  themeToggleIcon.textContent = isDark ? '☀️' : '🌙';
+  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+}
+
+updateThemeToggle(htmlRoot.getAttribute('data-theme'));
+
+themeToggle.addEventListener('click', () => {
+  const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  htmlRoot.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateThemeToggle(newTheme);
+});
+
+// ==========================================================================
 // Mobile navigation toggle
 // ==========================================================================
 const navToggle = document.getElementById('nav-toggle');

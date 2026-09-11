@@ -6,12 +6,15 @@
   --ink: #12161c;
   --paper: #faf9f6;
   --surface: #ffffff;
-  --accent: #0f766e;
-  --accent-dark: #0b5c56;
-  --accent-soft: rgba(15, 118, 110, 0.1);
-  --warm: #c2681a;
+  --text: #12161c;
   --text-muted: #5b6472;
   --border: #e4e1da;
+  --accent: #0f766e;
+  --accent-dark: #0b5c56;
+  --accent-text: #0f766e;
+  --accent-text-hover: #0b5c56;
+  --accent-soft: rgba(15, 118, 110, 0.1);
+  --warm: #c2681a;
   --success-color: #15803d;
   --error-color: #b91c1c;
   --radius: 10px;
@@ -23,6 +26,25 @@
   --font-display: "Space Grotesk", "Segoe UI", sans-serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", "Courier New", monospace;
+  color-scheme: light;
+}
+
+/* Dark theme — same brand accent fills (--accent/--accent-dark stay put since
+   white-on-teal buttons already pass contrast); everything shown as text/borders
+   on the page background swaps to a brighter accent so it stays readable. */
+:root[data-theme="dark"] {
+  --ink: #12161c;
+  --paper: #0f1115;
+  --surface: #1a1d23;
+  --text: #eceae5;
+  --text-muted: #9aa2ad;
+  --border: #2a2e35;
+  --accent-text: #2dd4bf;
+  --accent-text-hover: #5eead4;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
 }
 
 /* ==========================================================================
@@ -42,9 +64,10 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background-color: var(--paper);
-  color: var(--ink);
+  color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img, svg {
@@ -53,7 +76,7 @@ img, svg {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
 }
 
@@ -71,7 +94,7 @@ h1, h2, h3 {
   font-family: var(--font-display);
   line-height: 1.15;
   margin: 0 0 0.5em;
-  color: var(--ink);
+  color: var(--text);
 }
 
 p {
@@ -84,7 +107,7 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--accent-text);
   outline-offset: 2px;
 }
 
@@ -138,12 +161,13 @@ button {
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent-text);
 }
 
 .btn-secondary:hover {
   background-color: var(--accent);
+  border-color: var(--accent);
   color: #fff;
 }
 
@@ -152,12 +176,12 @@ button {
   align-items: center;
   gap: 0.35rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-top: 0.5rem;
 }
 
 .project-link:hover {
-  color: var(--accent-dark);
+  color: var(--accent-text-hover);
 }
 
 /* ==========================================================================
@@ -170,6 +194,11 @@ button {
   background-color: rgba(250, 249, 246, 0.88);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+:root[data-theme="dark"] .site-header {
+  background-color: rgba(15, 17, 21, 0.85);
 }
 
 .header-inner {
@@ -183,15 +212,42 @@ button {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--ink);
+  color: var(--text);
 }
 
 .logo span {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .logo:hover {
   text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: border-color var(--transition), background-color var(--transition), transform var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-text);
+  background-color: var(--accent-soft);
+  transform: translateY(-1px);
 }
 
 .nav-menu ul {
@@ -214,7 +270,7 @@ button {
   right: 0;
   bottom: 0;
   height: 2px;
-  background-color: var(--accent);
+  background-color: var(--accent-text);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition);
@@ -222,7 +278,7 @@ button {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--ink);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -246,9 +302,9 @@ button {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: var(--ink);
+  background-color: var(--text);
   border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
+  transition: transform var(--transition), opacity var(--transition), background-color var(--transition);
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
@@ -272,6 +328,7 @@ button {
 
 .section-alt {
   background-color: var(--surface);
+  transition: background-color 0.3s ease;
 }
 
 .section-header {
@@ -286,7 +343,7 @@ button {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.6rem;
 }
 
@@ -295,7 +352,7 @@ button {
   margin: 0;
 }
 
-/* Dark closing band (Contact) */
+/* Dark closing band (Contact) — an intentional dark accent in both themes */
 .section-dark {
   background-color: var(--ink);
   color: #e7e5df;
@@ -331,6 +388,10 @@ button {
   pointer-events: none;
 }
 
+:root[data-theme="dark"] .hero::before {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -346,7 +407,7 @@ button {
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.75rem;
 }
 
@@ -385,7 +446,7 @@ button {
   content: "";
   position: absolute;
   inset: 16px -16px -16px 16px;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--accent-text);
   border-radius: var(--radius);
   z-index: 0;
 }
@@ -431,7 +492,7 @@ button {
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .stat-label {
@@ -451,7 +512,7 @@ button {
 
 .tag-list li {
   border: 1px solid var(--border);
-  color: var(--ink);
+  color: var(--text);
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -459,8 +520,8 @@ button {
 }
 
 .tag-list li:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
   background-color: var(--accent-soft);
 }
 
@@ -586,9 +647,9 @@ button {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: var(--accent);
+  background-color: var(--accent-text);
   border: 3px solid var(--surface);
-  box-shadow: 0 0 0 2px var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-text);
 }
 
 .timeline-date {
@@ -596,7 +657,7 @@ button {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.35rem;
 }
 
@@ -659,10 +720,11 @@ button {
 
 .contact-form {
   background-color: var(--surface);
-  color: var(--ink);
+  color: var(--text);
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow-lg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .form-note {
@@ -694,13 +756,13 @@ button {
   font-family: inherit;
   font-size: 1rem;
   background-color: var(--paper);
-  color: var(--ink);
-  transition: border-color var(--transition);
+  color: var(--text);
+  transition: border-color var(--transition), background-color var(--transition), color var(--transition);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--accent);
+  border-color: var(--accent-text);
 }
 
 .form-group.has-error input,

@@ -25,9 +25,6 @@ full Software Development Life Cycle (SDLC), documented step by step in [`docs/`
 - **CSS3** — custom properties (design tokens), Flexbox, CSS Grid, media queries
 - **Vanilla JavaScript** — no libraries or frameworks
 
-No React, Vue, Next.js, databases, or APIs are used, by design — the goal is a project
-simple enough for a beginner to fully read, understand, and customize.
-
 ## Project Structure
 
 ```text

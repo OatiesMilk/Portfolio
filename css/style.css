@@ -241,8 +241,6 @@ button {
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1;
   transition: border-color var(--transition), background-color var(--transition), transform var(--transition);
 }
 
@@ -250,6 +248,29 @@ button {
   border-color: var(--accent-text);
   background-color: var(--accent-soft);
   transform: translateY(-1px);
+}
+
+.theme-toggle:hover .theme-icon {
+  color: var(--accent-text);
+}
+
+.theme-icon {
+  width: 17px;
+  height: 17px;
+  color: var(--text);
+  transition: color var(--transition);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
 }
 
 .nav-menu ul {

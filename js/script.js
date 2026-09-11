@@ -4,12 +4,10 @@
 // flash of the wrong theme on load)
 // ==========================================================================
 const themeToggle = document.getElementById('theme-toggle');
-const themeToggleIcon = themeToggle.querySelector('span');
 const htmlRoot = document.documentElement;
 
 function updateThemeToggle(theme) {
   const isDark = theme === 'dark';
-  themeToggleIcon.textContent = isDark ? '☀️' : '🌙';
   themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
   themeToggle.setAttribute('aria-pressed', String(isDark));
 }

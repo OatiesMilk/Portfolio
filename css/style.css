@@ -528,6 +528,13 @@ button {
   flex-wrap: wrap;
 }
 
+.hero-resume {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
 .hero-photo {
   position: relative;
   justify-self: center;
@@ -1044,7 +1051,8 @@ button {
     margin-right: auto;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .hero-resume {
     justify-content: center;
   }
 

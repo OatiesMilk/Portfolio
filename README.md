@@ -13,7 +13,8 @@ full Software Development Life Cycle (SDLC), documented step by step in [`docs/`
 - Skills section with visual proficiency bars
 - Projects section (3 sample projects) with tech tags and GitHub/demo links
 - Education & Experience timeline
-- Contact section with contact details and a validated, frontend-only contact form
+- Contact section with contact details and a validated contact form, wired to
+  Formspree so submissions are actually delivered by email
 - Scroll-to-top button
 - Fully responsive (tested at 375px, 768px, 1024px, and 1440px+)
 - Semantic, accessible HTML (skip link, landmarks, labelled form fields, focus states)
@@ -94,11 +95,7 @@ Then enable GitHub Pages on the repo (Settings → Pages → Deploy from branch 
 
 ## Future Improvements
 
-- Connect the contact form to a real backend or a service like Formspree so messages
-  are actually delivered (see the "Connecting the Contact Form" section in
-  [docs/05-deployment.md](docs/05-deployment.md)).
-- Swap the inline SVG placeholders for real profile and project photos/screenshots.
-- Add a dark mode toggle using the existing CSS custom properties.
+- Swap the inline SVG project placeholders for real screenshots/mockups.
 - Add a downloadable resume/CV link in the hero or contact section.
 - Add simple project filtering (e.g., by technology) once there are more than a
   handful of projects.

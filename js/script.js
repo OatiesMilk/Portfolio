@@ -166,13 +166,38 @@ function validateContactForm() {
   return isValid;
 }
 
-contactForm.addEventListener('submit', (event) => {
+const submitButton = contactForm.querySelector('button[type="submit"]');
+
+contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   formSuccess.textContent = '';
+  formSuccess.classList.remove('is-error');
 
-  if (validateContactForm()) {
-    formSuccess.textContent = 'Thanks for your message! (This is a demo form — no data was actually sent.)';
-    contactForm.reset();
+  if (!validateContactForm()) return;
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' },
+    });
+
+    if (response.ok) {
+      formSuccess.textContent = "Thanks for your message! I'll get back to you soon.";
+      contactForm.reset();
+    } else {
+      formSuccess.textContent = 'Something went wrong sending your message. Please email me directly instead.';
+      formSuccess.classList.add('is-error');
+    }
+  } catch (error) {
+    formSuccess.textContent = 'Something went wrong sending your message. Please email me directly instead.';
+    formSuccess.classList.add('is-error');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Message';
   }
 });
 

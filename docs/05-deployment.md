@@ -89,22 +89,21 @@ git push
 - **Netlify / Vercel / Cloudflare Pages** (if connected to the repo) redeploy
   automatically on every push as well.
 
-## 6. Connecting the Contact Form (Optional)
+## 6. Contact Form (Formspree)
 
-The contact form in `#contact` is frontend-only by design (see
-[03-design.md](03-design.md)) — it validates input but does not send data anywhere.
-To make it actually deliver messages without writing a backend, you can use a free
-form-handling service such as Formspree:
+The contact form in `#contact` is wired to [Formspree](https://formspree.io), a free
+form-handling service — no backend code required. The form's `action` attribute in
+`index.html` points at a Formspree endpoint, and `js/script.js` runs the existing
+client-side validation first, then submits via `fetch()` so the page shows an inline
+success/error message instead of redirecting.
 
-1. Create a free account and form at Formspree (or a similar service).
-2. Change the form tag in `index.html` to point at your form endpoint and add a
-   `method="POST"`, e.g.:
+To point the form at a different Formspree account (e.g., if you fork this project):
 
-   ```html
-   <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-id" method="POST">
-   ```
+1. Create a free account and form at Formspree.
+2. Replace the `action` URL on the `<form id="contact-form">` tag in `index.html`
+   with your own endpoint, e.g. `https://formspree.io/f/your-id`.
+3. No other changes are needed — the submit handler in `js/script.js` posts to
+   whatever URL is in `contactForm.action`.
 
-3. Remove or update the `form-note` text so it no longer says the form is
-   frontend-only, since it will now actually submit.
-4. The existing client-side validation in `js/script.js` still runs first, so users
-   still get inline error messages before the form submits.
+Formspree's free tier caps at 50 submissions/month and requires confirming your first
+real submission via a link they email you; after that it's fully automatic.

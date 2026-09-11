@@ -158,15 +158,18 @@ systems background without being a literal network-diagram gimmick.
   via `nth-child(even)`) instead of a uniform 3-card grid.
 - Skills shown as a categorized tag index instead of boxed cards with invented
   proficiency bars.
-- Contact rebuilt as a confident dark closing band with a large email link, instead
-  of a plain boxed form section.
+- Contact styled as a prominent closing section with a large email link, using the
+  same theme-aware tokens as the rest of the page (an earlier version hardcoded it as
+  an always-dark band, which meant it didn't follow the dark-mode toggle — reworked so
+  it switches with the theme like everywhere else; only the footer stays permanently
+  dark as a deliberate accent).
 
 **Color tokens**
 
 | Token | Value | Use |
 |---|---|---|
-| `--ink` | `#12161c` | Primary text, dark bands (footer, contact) |
-| `--paper` | `#faf9f6` | Page background |
+| `--ink` | `#12161c` | Constant near-black, used only for the footer's dark band |
+| `--paper` | `#faf9f6` | Page background (theme-swappable) |
 | `--surface` | `#ffffff` | Cards/elevated surfaces |
 | `--accent` | `#0f766e` (teal-700) | Primary accent — links, CTAs, markers |
 | `--warm` | `#c2681a` | Secondary accent, used sparingly |

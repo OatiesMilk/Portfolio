@@ -1057,6 +1057,11 @@ strong {
   grid-template-columns: 1.15fr 1.35fr;
 }
 
+.project-info-col,
+.project-preview-col {
+  min-width: 0;
+}
+
 .project-title {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   letter-spacing: -0.02em;
@@ -2121,6 +2126,12 @@ strong {
   .project-body-grid.reverse {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .yolo-tag {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .contact-grid {

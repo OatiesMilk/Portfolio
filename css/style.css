@@ -1930,6 +1930,12 @@ strong {
   transition: all var(--transition-fast);
 }
 
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+  max-height: 400px;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;

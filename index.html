@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dylan Akia (BS IT)</title>
-  <meta name="description" content="Portfolio of Dylan Akia, a BS Information Technology student at De La Salle University - Manila, building web, cloud, and network projects with Laravel, PHP, AWS, and Cisco Packet Tracer.">
+  <title>Dylan Akia — BS IT Portfolio &amp; Technical Work</title>
+  <meta name="description" content="Portfolio of Dylan Akia, a BS Information Technology student at De La Salle University - Manila, specializing in full-stack web applications, cloud infrastructure, and network engineering.">
   <meta name="author" content="Dylan Lee B. Akia">
 
   <!-- Open Graph / social preview tags -->
-  <meta property="og:title" content="Dylan Akia (Portfolio)">
-  <meta property="og:description" content="Portfolio showcasing the projects, skills, and experience of Dylan Akia, a BS IT student.">
+  <meta property="og:title" content="Dylan Akia — BS IT Portfolio">
+  <meta property="og:description" content="Explore full-stack, cloud, and network engineering projects by Dylan Akia (DLSU Manila).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://oatiesmilk.github.io/Portfolio/">
-  <meta property="og:image" content="https://oatiesmilk.github.io/Portfolio/assets/images/profile_picture.jpg">
+  <meta property="og:image" content="assets/images/profile_picture.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dylan Akia (Portfolio)">
-  <meta name="twitter:description" content="Portfolio showcasing the projects, skills, and experience of Dylan Akia, a BS IT student.">
-  <meta name="twitter:image" content="https://oatiesmilk.github.io/Portfolio/assets/images/profile_picture.jpg">
+  <meta name="twitter:title" content="Dylan Akia — BS IT Portfolio">
+  <meta name="twitter:description" content="Explore full-stack, cloud, and network engineering projects by Dylan Akia (DLSU Manila).">
+  <meta name="twitter:image" content="assets/images/profile_picture.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='45' font-family='Arial, sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='44' font-family='Arial, sans-serif' font-size='32' font-weight='700' fill='white' text-anchor='middle'%3EDA%3C/text%3E%3C/svg%3E">
 
+  <!-- Typography: Space Grotesk (Headings), Inter (Body), JetBrains Mono (Tech/Meta) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -36,457 +37,1026 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" id="skip-link">Skip to main content</a>
 
-  <header class="site-header">
+  <!-- Global Header / Navbar -->
+  <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#home" class="logo">Dylan<span>.</span>Akia</a>
+      <a href="#home" class="logo" id="brand-logo" aria-label="Dylan Akia Portfolio Home">
+        <span class="logo-symbol">&gt;_</span>
+        <span class="logo-text">Dylan<strong>Akia</strong></span>
+        <span class="logo-tag">IT</span>
+      </a>
 
       <div class="header-right">
-        <nav id="primary-navigation" class="nav-menu" aria-label="Primary">
+        <nav id="primary-navigation" class="nav-menu" aria-label="Primary Navigation">
           <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#home" class="nav-link" id="nav-item-home">Overview</a></li>
+            <li><a href="#about" class="nav-link" id="nav-item-about">About</a></li>
+            <li><a href="#projects" class="nav-link" id="nav-item-projects">Projects</a></li>
+            <li><a href="#skills" class="nav-link" id="nav-item-skills">Skills</a></li>
+            <li><a href="#education" class="nav-link" id="nav-item-education">Timeline</a></li>
+            <li><a href="#certifications" class="nav-link" id="nav-item-certifications">Credentials</a></li>
+            <li><a href="#contact" class="nav-link" id="nav-item-contact">Contact</a></li>
           </ul>
         </nav>
 
-        <button
-          class="theme-toggle"
-          id="theme-toggle"
-          aria-label="Switch to dark theme"
-          aria-pressed="false"
-        >
-          <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-          </svg>
-          <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4.5"/>
-            <line x1="12" y1="2" x2="12" y2="4.5"/>
-            <line x1="12" y1="19.5" x2="12" y2="22"/>
-            <line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/>
-            <line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/>
-            <line x1="2" y1="12" x2="4.5" y2="12"/>
-            <line x1="19.5" y1="12" x2="22" y2="12"/>
-            <line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/>
-            <line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/>
-          </svg>
-        </button>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch to dark theme"
+            aria-pressed="false"
+            type="button"
+          >
+            <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4.5"/>
+              <line x1="12" y1="2" x2="12" y2="4.5"/>
+              <line x1="12" y1="19.5" x2="12" y2="22"/>
+              <line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/>
+              <line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/>
+              <line x1="2" y1="12" x2="4.5" y2="12"/>
+              <line x1="19.5" y1="12" x2="22" y2="12"/>
+              <line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/>
+              <line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/>
+            </svg>
+          </button>
 
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+          <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-header-resume" id="header-resume-btn">
+            <span>Resume</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            type="button"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- Hero / Home -->
+    <!-- SECTION: HERO -->
     <section id="home" class="hero" aria-labelledby="hero-heading">
-      <div class="hero-nodes" aria-hidden="true">
-        <span class="node"></span>
-        <span class="node"></span>
-        <span class="node"></span>
-        <span class="node"></span>
-        <span class="node"></span>
-        <span class="node"></span>
-      </div>
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="eyebrow">Hi, my name is</p>
-          <h1 id="hero-heading">Dylan Akia</h1>
-          <p class="hero-title">BS IT Student</p>
-          <p class="hero-description">
-            I'm an Information Technology student at De La Salle University - Manila,
-            building full-stack web applications, exploring cloud infrastructure, and
-            designing secure network solutions.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          <div class="hero-status-pill" id="hero-status-badge">
+            <span class="status-indicator">
+              <span class="status-ping"></span>
+              <span class="status-dot"></span>
+            </span>
+            <span class="status-text">BS IT &bull; De La Salle University &bull; Seeking 2026 Internships</span>
           </div>
-          <div class="hero-resume">
-            <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" class="project-link">View Resume &rarr;</a>
+
+          <h1 id="hero-heading" class="hero-name">
+            Dylan Akia
+          </h1>
+          
+          <p class="hero-role-title">
+            Information Technology Student &amp; Full-Stack / Cloud Builder
+          </p>
+
+          <p class="hero-description">
+            I engineer web systems, simulate enterprise network infrastructure, and explore cloud architecture. Currently developing computer vision inspection platforms with Laravel, configuring CCNA-grade WAN VPNs, and expanding cloud solutions on AWS.
+          </p>
+
+          <!-- Core Capability Highlights -->
+          <div class="hero-specs-row" id="hero-specs">
+            <div class="spec-item">
+              <span class="spec-label">Focus</span>
+              <span class="spec-val">Web &bull; Cloud &bull; Networks</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-label">Institution</span>
+              <span class="spec-val">DLSU - Manila</span>
+            </div>
+            <div class="spec-divider"></div>
+            <div class="spec-item">
+              <span class="spec-label">Certifications</span>
+              <span class="spec-val">CCNA &bull; AWS Academy</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-projects-cta">
+              <span>Explore Selected Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="hero-contact-cta">
+              <span>Get In Touch</span>
+            </a>
+            <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-text" id="hero-resume-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Download Resume (PDF)</span>
+            </a>
           </div>
         </div>
-        <div class="hero-photo">
-          <img
-            src="assets/images/profile_picture.jpg"
-            alt="Profile Picture"
-            class="avatar"
-            width="320"
-            height="320"
-            decoding="async"
-            fetchpriority="high"
-          >
+
+        <div class="hero-visual">
+          <div class="profile-card" id="hero-profile-card">
+            <div class="profile-card-header">
+              <span class="card-dot red"></span>
+              <span class="card-dot yellow"></span>
+              <span class="card-dot green"></span>
+              <span class="card-title-text">identity.sys // dylan_akia</span>
+            </div>
+            <div class="profile-img-container">
+              <img src="assets/images/profile_picture.jpg" alt="Photograph of Dylan Akia, BS Information Technology Student" class="avatar" id="hero-avatar" width="400" height="400">
+              <div class="profile-badge-overlay">
+                <span class="badge-role">BS IT Student</span>
+                <span class="badge-campus">DLSU Manila</span>
+              </div>
+            </div>
+            <div class="profile-card-footer">
+              <div class="profile-stat">
+                <span class="stat-number">3+</span>
+                <span class="stat-caption">Projects Shipped</span>
+              </div>
+              <div class="profile-stat-divider"></div>
+              <div class="profile-stat">
+                <span class="stat-number">3</span>
+                <span class="stat-caption">Industry Certs</span>
+              </div>
+              <div class="profile-stat-divider"></div>
+              <div class="profile-stat">
+                <span class="stat-number">2021</span>
+                <span class="stat-caption">DLSU Cohort</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- SECTION: ABOUT -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">01 — About</span>
-          <h2 id="about-heading">About Me</h2>
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">01 // Background &amp; Focus</span>
+            <h2 id="about-heading">About Me</h2>
+          </div>
+          <p class="section-lead">
+            Bridging software development, networking, and cloud systems with a pragmatic, hands-on engineering mindset.
+          </p>
         </div>
+
         <div class="about-grid reveal">
-          <div class="about-text">
-            <p>
-              I'm a BS Information Technology student at De La Salle University -
-              Manila, building practical experience across full-stack web development,
-              cloud computing, and network engineering. My work spans redesigning user
-              interfaces in Figma, simulating enterprise network infrastructure in
-              Cisco Packet Tracer, and developing AI-powered web systems with Laravel.
+          <div class="about-narrative">
+            <p class="lead-paragraph">
+              I am an Information Technology student at <strong>De La Salle University - Manila</strong>, building practical experience across full-stack web engineering, cloud computing, and enterprise network design. My work spans architecting secure multi-site WAN topologies, building AI-assisted manufacturing dashboards, and crafting human-centered UI/UX systems.
             </p>
             <p>
-              I'm currently building an AI-assisted defect detection system for shoe
-              manufacturing, combining YOLO object detection with a Laravel-based web
-              platform and role-based dashboards. I enjoy projects that connect
-              different parts of IT — from network design, to cloud infrastructure, to
-              the applications that run on top of them.
+              I am currently leading development on an AI-assisted defect detection platform for shoe manufacturing. The system bridges <strong>YOLO object detection</strong> with a <strong>Laravel web platform</strong>, implementing role-based dashboards for quality inspectors, line managers, and plant administrators alongside automated ingestion APIs protected by Laravel Sanctum.
             </p>
             <p>
-              Outside of academics and personal projects, I've volunteered as an event
-              organizer for an education technology conference, and I hold
-              certifications in networking (CCNA) and cloud computing (AWS Academy,
-              AWS Cloud Quest).
+              Beyond software, I focus on what makes systems secure and resilient underneath: enterprise routing, site-to-site VPN tunnels, access control lists, and cloud provisioning on AWS. I enjoy projects that connect the full technical pipeline—from low-level network topology to cloud services to the final user interface.
             </p>
+
+            <div class="about-commitments" id="about-commitments">
+              <div class="commitment-card">
+                <div class="commitment-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>Full-Stack Architecture</h4>
+                  <p>Building clean MVC applications with Laravel, PHP, relational MySQL databases, and modern component styles.</p>
+                </div>
+              </div>
+
+              <div class="commitment-card">
+                <div class="commitment-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>Enterprise Networking</h4>
+                  <p>Designing secure branch connections, multi-site IPSec VPN tunnels, and CCNA-standard network topologies.</p>
+                </div>
+              </div>
+
+              <div class="commitment-card">
+                <div class="commitment-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <div class="commitment-text">
+                  <h4>Cloud &amp; Automation</h4>
+                  <p>Certified AWS Academy foundation graduate exploring scalable deployments, storage buckets, and server management.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="about-side">
-            <ul class="tag-list" aria-label="Personal interests">
-              <li>Network Infrastructure</li>
-              <li>Web Development</li>
-              <li>Business Analysis</li>
-              <li>Cloud Services</li>
-            </ul>
-            <ul class="about-stats">
-              <li>
-                <span class="stat-value">3</span>
-                <span class="stat-label">Projects shipped</span>
-              </li>
-              <li>
-                <span class="stat-value">3</span>
-                <span class="stat-label">Certifications earned</span>
-              </li>
-              <li>
-                <span class="stat-value">2021</span>
-                <span class="stat-label">Started at DLSU</span>
-              </li>
-            </ul>
-          </div>
+
+          <aside class="about-sidebar">
+            <div class="sidebar-box">
+              <h3 class="sidebar-box-title">Core Disciplines</h3>
+              <ul class="discipline-list">
+                <li>
+                  <span class="bullet">&bull;</span>
+                  <div>
+                    <strong>Web System Engineering</strong>
+                    <span class="sub">Laravel, MVC, REST APIs, MySQL</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet">&bull;</span>
+                  <div>
+                    <strong>Network Infrastructure</strong>
+                    <span class="sub">Cisco Packet Tracer, Site-to-Site VPN, WAN</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet">&bull;</span>
+                  <div>
+                    <strong>Cloud Foundations</strong>
+                    <span class="sub">AWS Academy &bull; Cloud Practitioner</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="bullet">&bull;</span>
+                  <div>
+                    <strong>UI/UX Prototyping</strong>
+                    <span class="sub">Figma, Information Hierarchy, Testing</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-box info-callout">
+              <span class="callout-tag">Location &amp; Availability</span>
+              <p class="callout-desc">
+                Based in <strong>Makati City &amp; Manila, Philippines</strong>. Available for on-site, hybrid, and remote internships and tech roles starting 2026.
+              </p>
+              <div class="callout-actions">
+                <a href="#contact" class="link-arrow">Start a conversation &rarr;</a>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+    <!-- SECTION: FEATURED PROJECTS (Visual Storytelling & Case Studies) -->
+    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">02 — Skills</span>
-          <h2 id="skills-heading">Skills</h2>
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">02 // Selected Projects</span>
+            <h2 id="projects-heading">Featured Engineering Work</h2>
+          </div>
+          <p class="section-lead">
+            Real systems across full-stack software, computer vision inspection, enterprise networking, and UI design.
+          </p>
         </div>
-        <div class="skills-index reveal">
-          <div class="skill-group">
-            <span class="skill-group-label">Programming Languages</span>
-            <ul class="tag-list">
-              <li>PHP</li><li>Python</li><li>SQL</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Web Development</span>
-            <ul class="tag-list">
-              <li>Laravel</li><li>HTML</li><li>CSS</li><li>Tailwind</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Cloud Computing</span>
-            <ul class="tag-list">
-              <li>AWS</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <span class="skill-group-label">Tools</span>
-            <ul class="tag-list">
-              <li>GitHub</li><li>MySQL</li><li>Figma</li><li>Cisco Packet Tracer</li>
-            </ul>
-          </div>
-        </div>
-        <div class="soft-skills reveal">
-          <span class="skill-group-label">Soft Skills</span>
-          <ul class="tag-list">
-            <li>Analytical Thinking</li><li>Problem-Solving</li><li>Team Collaboration</li>
-          </ul>
+
+        <div class="project-showcase">
+          <!-- PROJECT 1: AI Quality Inspection -->
+          <article class="project-card reveal" id="project-ai-inspection">
+            <div class="project-meta-header">
+              <span class="project-num">CASE 01</span>
+              <span class="project-domain">Web &amp; Computer Vision Engineering</span>
+              <span class="project-timeline">Jan 2026 &ndash; Present</span>
+            </div>
+
+            <div class="project-body-grid">
+              <div class="project-info-col">
+                <h3 class="project-title">AI System for Quality Inspection</h3>
+                <p class="project-tagline">
+                  AI-assisted defect detection system for footwear manufacturing, fusing YOLO computer vision inference with a full-stack Laravel management platform.
+                </p>
+
+                <div class="project-breakdown">
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">The Challenge</h4>
+                    <p>Manual shoe defect inspection on factory assembly lines is prone to fatigue and inconsistent quality reporting across shifts.</p>
+                  </div>
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">Engineered Solution &amp; My Role</h4>
+                    <p>
+                      Built the central web platform with <strong>Laravel</strong> and <strong>MySQL</strong>. Developed role-based workflows for <em>Quality Inspectors</em>, <em>Plant Managers</em>, <em>Admins</em>, and <em>Shoe Constructors</em>. Built a token-secured REST API with <strong>Laravel Sanctum</strong> to ingest real-time YOLO defect annotations (stitch misalignment, adhesive overflow, sole defects).
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tech-group">
+                  <span class="tech-group-label">Technologies</span>
+                  <ul class="tag-list" aria-label="Technologies used in AI Quality Inspection">
+                    <li>Laravel</li>
+                    <li>PHP</li>
+                    <li>YOLO Object Detection</li>
+                    <li>Computer Vision</li>
+                    <li>Laravel Sanctum</li>
+                    <li>MySQL</li>
+                    <li>REST API</li>
+                  </ul>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://github.com/OatiesMilk/AI-System-for-Quality-Inspection" class="btn btn-primary" target="_blank" rel="noopener noreferrer" id="link-ai-inspection-github">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Interactive Mockup & Telemetry View -->
+              <div class="project-preview-col">
+                <div class="browser-mockup">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-address">
+                      <span class="padlock">&bull;</span> https://quality-inspection.internal/dashboards/inspector
+                    </div>
+                    <div class="mockup-chip live">API Connected</div>
+                  </div>
+                  <div class="mockup-content ai-hud-preview">
+                    <div class="ai-hud-header">
+                      <div>
+                        <span class="hud-label">CURRENT INGESTION</span>
+                        <h4 class="hud-title">Production Line A4 &bull; Camera #02</h4>
+                      </div>
+                      <div class="hud-badge active">YOLOv8 Active</div>
+                    </div>
+
+                    <div class="ai-viewfinder">
+                      <!-- Simulated Computer Vision Detection Box -->
+                      <div class="viewfinder-grid"></div>
+                      <div class="yolo-box box-1">
+                        <span class="yolo-tag">DEFECT: Stitch Misalignment [94.2%]</span>
+                      </div>
+                      <div class="yolo-box box-2">
+                        <span class="yolo-tag verified">VERIFIED: Sole Bonding OK [98.6%]</span>
+                      </div>
+                      <div class="crosshair cross-tl"></div>
+                      <div class="crosshair cross-tr"></div>
+                      <div class="crosshair cross-bl"></div>
+                      <div class="crosshair cross-br"></div>
+                    </div>
+
+                    <div class="ai-hud-stats">
+                      <div class="hud-stat-item">
+                        <span class="label">Defect Threshold</span>
+                        <span class="val">85.0%</span>
+                      </div>
+                      <div class="hud-stat-item">
+                        <span class="label">Inference Latency</span>
+                        <span class="val">38ms</span>
+                      </div>
+                      <div class="hud-stat-item">
+                        <span class="label">Auth Mechanism</span>
+                        <span class="val">Sanctum Token</span>
+                      </div>
+                      <div class="hud-stat-item">
+                        <span class="label">Inspection Status</span>
+                        <span class="val status-flagged">Flagged for Review</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: AnimoTech Inc. Network Design -->
+          <article class="project-card reveal" id="project-animotech">
+            <div class="project-meta-header">
+              <span class="project-num">CASE 02</span>
+              <span class="project-domain">Enterprise Network Infrastructure &amp; Security</span>
+              <span class="project-timeline">Term 3 AY 2024&ndash;2025</span>
+            </div>
+
+            <div class="project-body-grid reverse">
+              <div class="project-info-col">
+                <h3 class="project-title">AnimoTech Inc. Enterprise WAN Design</h3>
+                <p class="project-tagline">
+                  Multi-site corporate network simulation connecting Manila Headquarters, BGC Tech Hub, and Laguna Branch via encrypted IPSec Site-to-Site VPN tunnels.
+                </p>
+
+                <div class="project-breakdown">
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">The Challenge</h4>
+                    <p>Connecting three geographically distinct commercial sites with diverse subnets, stringent department isolation, and secure cross-branch communication.</p>
+                  </div>
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">Engineered Solution &amp; My Role</h4>
+                    <p>
+                      Architected complete Cisco Packet Tracer topologies. Configured static &amp; dynamic routing, <strong>IPSec Site-to-Site VPN</strong> encryption over WAN links, VLAN segmentations, and Standard/Extended <strong>Access Control Lists (ACLs)</strong> for departmental policy enforcement. Authored comprehensive network documentation including IP addressing schemas and security matrices.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tech-group">
+                  <span class="tech-group-label">Technologies</span>
+                  <ul class="tag-list" aria-label="Technologies used in AnimoTech Inc. Network Design">
+                    <li>Cisco Packet Tracer</li>
+                    <li>Site-to-Site IPSec VPN</li>
+                    <li>VLAN &amp; Inter-VLAN Routing</li>
+                    <li>ACL Security Matrices</li>
+                    <li>WAN Connectivity</li>
+                    <li>Network Architecture</li>
+                  </ul>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://drive.google.com/file/d/1jyKT9H23XeuObqgAsCYMouSDarykvPvh/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener noreferrer" id="link-animotech-doc">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    <span>View Network Documentation</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Multi-Diagram Gallery with Switcher -->
+              <div class="project-preview-col">
+                <div class="browser-mockup">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-address">
+                      <span class="padlock">&bull;</span> cisco-pt://animotech-wan-infrastructure.pkt
+                    </div>
+                    <div class="mockup-chip">Cisco Packet Tracer</div>
+                  </div>
+
+                  <div class="diagram-viewer" id="animotech-viewer">
+                    <div class="diagram-frame">
+                      <img 
+                        id="animotech-active-img" 
+                        src="assets/images/animotech-one.png" 
+                        alt="AnimoTech Inc. Network Architecture Topology Diagram" 
+                        class="project-screenshot"
+                        width="800"
+                        height="450"
+                      >
+                    </div>
+
+                    <!-- Diagram Switcher Tabs -->
+                    <div class="diagram-switcher" role="tablist" aria-label="AnimoTech Diagram Views">
+                      <button 
+                        class="diagram-tab active" 
+                        role="tab" 
+                        aria-selected="true" 
+                        data-img="assets/images/animotech-one.png"
+                        data-caption="Full Multi-Site WAN Topology (Manila &bull; BGC &bull; Laguna)"
+                        id="tab-animotech-1"
+                      >
+                        <span class="tab-index">01</span>
+                        <span>Full WAN Topology</span>
+                      </button>
+                      <button 
+                        class="diagram-tab" 
+                        role="tab" 
+                        aria-selected="false" 
+                        data-img="assets/images/animotech-two.png"
+                        data-caption="Core Routing &amp; VLAN Switching Infrastructure"
+                        id="tab-animotech-2"
+                      >
+                        <span class="tab-index">02</span>
+                        <span>Routing &amp; Switches</span>
+                      </button>
+                      <button 
+                        class="diagram-tab" 
+                        role="tab" 
+                        aria-selected="false" 
+                        data-img="assets/images/animotech-three.png"
+                        data-caption="Site-to-Site VPN Tunnels &amp; Access Controls"
+                        id="tab-animotech-3"
+                      >
+                        <span class="tab-index">03</span>
+                        <span>IPSec VPN Tunnels</span>
+                      </button>
+                    </div>
+                    <p class="diagram-caption" id="animotech-caption">
+                      Full Multi-Site WAN Topology (Manila &bull; BGC &bull; Laguna)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Discord Redesign UI/UX -->
+          <article class="project-card reveal" id="project-discord-redesign">
+            <div class="project-meta-header">
+              <span class="project-num">CASE 03</span>
+              <span class="project-domain">Human-Computer Interaction &amp; UI/UX</span>
+              <span class="project-timeline">Term 2 AY 2024&ndash;2025</span>
+            </div>
+
+            <div class="project-body-grid">
+              <div class="project-info-col">
+                <h3 class="project-title">Discord Interface Redesign &amp; Prototyping</h3>
+                <p class="project-tagline">
+                  Comprehensive UX audit and high-fidelity redesign of Discord's desktop application, restructuring channel hierarchies, active voice feeds, and discovery navigation.
+                </p>
+
+                <div class="project-breakdown">
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">The Challenge</h4>
+                    <p>Discord's desktop UI suffers from density fatigue, cluttered server sidebars, and confusing separation between direct messages and public community rooms for casual users.</p>
+                  </div>
+                  <div class="breakdown-block">
+                    <h4 class="breakdown-title">Engineered Solution &amp; My Role</h4>
+                    <p>
+                      Conducted heuristic evaluation and created interactive component libraries in <strong>Figma</strong>. Modernized visual hierarchy with calibrated micro-contrast, unified notification badges, streamlined voice channel presence, and built an interactive prototype for usability feedback.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tech-group">
+                  <span class="tech-group-label">Technologies</span>
+                  <ul class="tag-list" aria-label="Technologies used in Discord Redesign">
+                    <li>Figma</li>
+                    <li>UI/UX Design</li>
+                    <li>Design Systems</li>
+                    <li>Interactive Prototyping</li>
+                    <li>User Testing</li>
+                    <li>Wireframing</li>
+                  </ul>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://www.figma.com/proto/CwmJedF27RuknxyJGYKr2e/MCO3-Draft?node-id=133-742&amp;t=rfWGg7PMf1ooJlQC-1" class="btn btn-primary" target="_blank" rel="noopener noreferrer" id="link-discord-figma">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path></svg>
+                    <span>Launch Figma Prototype</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Project Screenshot in Browser Frame -->
+              <div class="project-preview-col">
+                <div class="browser-mockup">
+                  <div class="mockup-header">
+                    <div class="mockup-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="mockup-address">
+                      <span class="padlock">&bull;</span> figma.com/@oatiesmilk/discord-redesign-mco3
+                    </div>
+                    <div class="mockup-chip">High-Fidelity Mockup</div>
+                  </div>
+                  <div class="mockup-content image-wrap">
+                    <img 
+                      src="assets/images/discord-redesign.png" 
+                      alt="Discord Redesign High-Fidelity UI Interface Preview in Figma" 
+                      class="project-screenshot" 
+                      id="img-discord-redesign"
+                      width="800"
+                      height="450"
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section" aria-labelledby="projects-heading">
+    <!-- SECTION: SKILLS & TECHNICAL STACK -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">03 — Projects</span>
-          <h2 id="projects-heading">Projects</h2>
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">03 // Technical Capabilities</span>
+            <h2 id="skills-heading">Skills &amp; Technology Stack</h2>
+          </div>
+          <p class="section-lead">
+            Categorized by engineering discipline, highlighting practical tools used across real academic and personal deployments.
+          </p>
         </div>
-        <ul class="project-rows">
-          <li class="project-row reveal">
-            <div class="project-media" aria-hidden="true">
-              <svg viewBox="0 0 400 300" role="presentation">
-                <defs>
-                  <pattern id="grid-01" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r="1" fill="#0f766e" opacity="0.12"/>
-                  </pattern>
-                </defs>
-                <rect width="400" height="300" fill="#dbeafe"/>
-                <rect width="400" height="300" fill="url(#grid-01)"/>
-                <rect x="40" y="72" width="320" height="156" rx="10" fill="#0f766e" opacity="0.9"/>
-                <circle cx="82" cy="106" r="11" fill="#fff" opacity="0.95"/>
-                <rect x="112" y="99" width="200" height="14" rx="4" fill="#fff" opacity="0.85"/>
-                <rect x="70" y="140" width="260" height="10" rx="4" fill="#fff" opacity="0.4"/>
-                <rect x="70" y="160" width="200" height="10" rx="4" fill="#fff" opacity="0.4"/>
-                <rect x="70" y="190" width="100" height="24" rx="6" fill="#fff" opacity="0.75"/>
-              </svg>
-            </div>
-            <div class="project-copy">
-              <span class="project-index">01</span>
-              <span class="project-meta">Human Computer Interaction &middot; Term 2 AY 2024&ndash;2025</span>
-              <h3>Discord Redesign UI/UX</h3>
-              <p>
-                Redesigned the Discord interface in Figma to improve usability, visual
-                hierarchy, and overall user experience. Created high-fidelity mockups
-                and interactive prototypes focused on streamlined navigation and a
-                modernized aesthetic.
-              </p>
-              <ul class="tag-list">
-                <li>Figma</li><li>UI/UX Design</li><li>Prototyping</li>
-              </ul>
-              <a href="https://www.figma.com/proto/CwmJedF27RuknxyJGYKr2e/MCO3-Draft?node-id=133-742&t=rfWGg7PMf1ooJlQC-1" class="project-link" target="_blank" rel="noopener noreferrer">View Prototype &rarr;</a>
-            </div>
-          </li>
 
-          <li class="project-row reveal">
-            <div class="project-media" aria-hidden="true">
-              <svg viewBox="0 0 400 300" role="presentation">
-                <defs>
-                  <pattern id="grid-02" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r="1" fill="#0f766e" opacity="0.12"/>
-                  </pattern>
-                </defs>
-                <rect width="400" height="300" fill="#dcfce7"/>
-                <rect width="400" height="300" fill="url(#grid-02)"/>
-                <line x1="120" y1="105" x2="230" y2="80" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
-                <line x1="120" y1="150" x2="230" y2="150" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
-                <line x1="120" y1="195" x2="230" y2="220" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
-                <circle cx="100" cy="150" r="34" fill="#0f766e" opacity="0.9"/>
-                <circle cx="260" cy="80" r="24" fill="#0f766e" opacity="0.65"/>
-                <circle cx="260" cy="150" r="24" fill="#0f766e" opacity="0.65"/>
-                <circle cx="260" cy="220" r="24" fill="#0f766e" opacity="0.65"/>
-                <rect x="315" y="70" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
-                <rect x="315" y="140" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
-                <rect x="315" y="210" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
-              </svg>
+        <div class="skills-matrix reveal" id="skills-matrix">
+          <!-- Group 1: Programming -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">01</span>
+              <h3>Programming &amp; Logic</h3>
             </div>
-            <div class="project-copy">
-              <span class="project-index">02</span>
-              <span class="project-meta">WAN Connectivity &middot; Term 3 AY 2024&ndash;2025</span>
-              <h3>AnimoTech Inc. Network Design</h3>
-              <p>
-                Designed and implemented a simulation of a multi-site network
-                infrastructure connecting Manila, BGC, and Laguna branches using
-                site-to-site VPNs for secure WAN connectivity. Produced detailed
-                network documentation, including topology diagrams, security policy
-                matrices, and proof-of-concept testing for access controls.
-              </p>
-              <ul class="tag-list">
-                <li>Cisco Packet Tracer</li><li>VPN</li><li>Network Design</li>
-              </ul>
-              <a href="https://drive.google.com/file/d/1jyKT9H23XeuObqgAsCYMouSDarykvPvh/view?usp=sharing" class="project-link" target="_blank" rel="noopener noreferrer">View Documentation &rarr;</a>
-            </div>
-          </li>
+            <p class="cat-desc">Core languages used for backend logic, automation scripts, and database queries.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">PHP</span>
+                <span class="pill-context">Laravel MVC &bull; OOP</span>
+              </li>
+              <li>
+                <span class="pill-name">Python</span>
+                <span class="pill-context">YOLO &bull; Computer Vision</span>
+              </li>
+              <li>
+                <span class="pill-name">SQL</span>
+                <span class="pill-context">Relational Schema &bull; Queries</span>
+              </li>
+            </ul>
+          </div>
 
-          <li class="project-row reveal">
-            <div class="project-media" aria-hidden="true">
-              <svg viewBox="0 0 400 300" role="presentation">
-                <defs>
-                  <pattern id="grid-03" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r="1" fill="#c2681a" opacity="0.14"/>
-                  </pattern>
-                </defs>
-                <rect width="400" height="300" fill="#fef3c7"/>
-                <rect width="400" height="300" fill="url(#grid-03)"/>
-                <rect x="70" y="95" width="110" height="110" rx="10" fill="#c2681a" opacity="0.25"/>
-                <circle cx="125" cy="150" r="46" fill="none" stroke="#c2681a" stroke-width="4" opacity="0.85"/>
-                <circle cx="125" cy="150" r="14" fill="#c2681a" opacity="0.9"/>
-                <line x1="125" y1="104" x2="125" y2="115" stroke="#c2681a" stroke-width="4" opacity="0.7"/>
-                <line x1="125" y1="185" x2="125" y2="196" stroke="#c2681a" stroke-width="4" opacity="0.7"/>
-                <rect x="210" y="105" width="150" height="16" rx="8" fill="#c2681a" opacity="0.6"/>
-                <rect x="210" y="140" width="120" height="16" rx="8" fill="#c2681a" opacity="0.4"/>
-                <rect x="210" y="175" width="90" height="16" rx="8" fill="#c2681a" opacity="0.3"/>
-              </svg>
+          <!-- Group 2: Web Engineering -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">02</span>
+              <h3>Web &amp; Frameworks</h3>
             </div>
-            <div class="project-copy">
-              <span class="project-index">03</span>
-              <span class="project-meta">Web and AI System Development &middot; January 2026&ndash;Present</span>
-              <h3>AI Quality Inspection</h3>
-              <p>
-                Developing an AI-assisted defect detection system for shoe
-                manufacturing using YOLO object detection and Laravel for web
-                development. Implemented role-based dashboards for Inspectors,
-                Managers, Admins, and Shoe Constructors, and integrated a computer
-                vision ingestion API with Laravel Sanctum.
-              </p>
-              <ul class="tag-list">
-                <li>Laravel</li><li>YOLO</li><li>Computer Vision</li><li>Laravel Sanctum</li>
-              </ul>
-              <a href="https://github.com/OatiesMilk/AI-System-for-Quality-Inspection" class="project-link" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>
+            <p class="cat-desc">Building responsive, accessible, token-authenticated full-stack applications.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">Laravel</span>
+                <span class="pill-context">Blade &bull; Eloquent &bull; Sanctum</span>
+              </li>
+              <li>
+                <span class="pill-name">HTML5 / CSS3</span>
+                <span class="pill-context">Semantic &bull; Responsive Design</span>
+              </li>
+              <li>
+                <span class="pill-name">Tailwind CSS</span>
+                <span class="pill-context">Utility Architecture</span>
+              </li>
+              <li>
+                <span class="pill-name">REST APIs</span>
+                <span class="pill-context">JSON Ingestion &bull; Endpoints</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 3: Networking -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">03</span>
+              <h3>Network Engineering</h3>
             </div>
-          </li>
-        </ul>
+            <p class="cat-desc">Enterprise routing, tunneling, access control, and topology documentation.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">Cisco Packet Tracer</span>
+                <span class="pill-context">Enterprise Simulation</span>
+              </li>
+              <li>
+                <span class="pill-name">IPSec Site-to-Site VPN</span>
+                <span class="pill-context">Encrypted WAN Links</span>
+              </li>
+              <li>
+                <span class="pill-name">VLAN &amp; Subnetting</span>
+                <span class="pill-context">Segmentation &bull; CIDR</span>
+              </li>
+              <li>
+                <span class="pill-name">Access Control Lists</span>
+                <span class="pill-context">Network Security Policies</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 4: Cloud & Systems -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">04</span>
+              <h3>Cloud &amp; Databases</h3>
+            </div>
+            <p class="cat-desc">Cloud provider fundamentals, relational storage, and server environments.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">AWS</span>
+                <span class="pill-context">Cloud Foundations &bull; Practitioner</span>
+              </li>
+              <li>
+                <span class="pill-name">MySQL</span>
+                <span class="pill-context">Database Design &bull; Keys &bull; Indexing</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 5: Tools & Workflow -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">05</span>
+              <h3>Tools &amp; Workflow</h3>
+            </div>
+            <p class="cat-desc">Version control, UI design software, and API verification tools.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">Git &amp; GitHub</span>
+                <span class="pill-context">Version Control &bull; Open Source</span>
+              </li>
+              <li>
+                <span class="pill-name">Figma</span>
+                <span class="pill-context">Wireframing &bull; Design Systems</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 6: Professional Practices -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <span class="cat-code">06</span>
+              <h3>Professional &amp; Analytical</h3>
+            </div>
+            <p class="cat-desc">Collaborative delivery, technical writing, and business requirements.</p>
+            <ul class="skill-pill-list">
+              <li>
+                <span class="pill-name">Analytical Thinking</span>
+                <span class="pill-context">System Problem Deconstruction</span>
+              </li>
+              <li>
+                <span class="pill-name">Technical Documentation</span>
+                <span class="pill-context">Matrices, Specs &amp; Topologies</span>
+              </li>
+              <li>
+                <span class="pill-name">Team Coordination</span>
+                <span class="pill-context">PHILED '25 Event Leadership</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Education / Experience -->
+    <!-- SECTION: EDUCATION & EXPERIENCE TIMELINE -->
     <section id="education" class="section section-alt" aria-labelledby="education-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">04 — Education &amp; Experience</span>
-          <h2 id="education-heading">Education &amp; Experience</h2>
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">04 // Journey &amp; Milestones</span>
+            <h2 id="education-heading">Education &amp; Experience</h2>
+          </div>
+          <p class="section-lead">
+            Chronological academic training and leadership roles in the technology sphere.
+          </p>
         </div>
-        <ol class="timeline reveal">
-          <li class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-date">December 2, 2025</span>
-              <h3>Event Organizer — 2025 PHILED Conference</h3>
-              <p>
-                Registered attendees and managed check-in at the venue entrance.
-                Represented RaksoCT and promoted its education technology products to
-                conference attendees, and supported general event organization and
-                on-site coordination.
+
+        <div class="editorial-timeline reveal" id="timeline-list">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-row">
+            <div class="timeline-meta">
+              <span class="timeline-badge-active">Ongoing</span>
+              <span class="timeline-period">Sep 2021 &ndash; Present</span>
+              <span class="timeline-org">De La Salle University - Manila</span>
+            </div>
+            <div class="timeline-card">
+              <h3 class="timeline-role">Bachelor of Science in Information Technology</h3>
+              <p class="timeline-summary">
+                Comprehensive degree curriculum covering full-stack software development, cloud infrastructure architectures, telecommunications, and enterprise networking. Active project lead in AI defect inspection and network topologies.
               </p>
+              <div class="timeline-highlights">
+                <span class="highlight-chip">Data Structures &amp; Algorithms</span>
+                <span class="highlight-chip">Enterprise WAN Connectivity</span>
+                <span class="highlight-chip">Human Computer Interaction</span>
+                <span class="highlight-chip">Web Development with Laravel</span>
+              </div>
             </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-date">November 11, 2025</span>
-              <h3>AWS Academy Graduate — Cloud Foundations</h3>
-              <p>Certification covering core cloud computing foundations through AWS Academy.</p>
-              <a href="https://www.credly.com/badges/e43e073c-1d2e-49d6-97bc-ea11374dd665/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-row">
+            <div class="timeline-meta">
+              <span class="timeline-badge">Conference</span>
+              <span class="timeline-period">December 2, 2025</span>
+              <span class="timeline-org">PHILED 2025 Conference &bull; RaksoCT</span>
             </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-date">October 4, 2025</span>
-              <h3>AWS Cloud Quest: Cloud Practitioner</h3>
-              <p>Certification covering core AWS cloud practitioner concepts and services.</p>
-              <a href="https://www.credly.com/badges/5cd3c038-7e81-4d15-a219-0a3e3f4ff37d/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-date">September 1, 2025</span>
-              <h3>CCNA: Enterprise Networking, Security, and Automation</h3>
-              <p>Certification in enterprise networking, security, and network automation.</p>
-              <a href="https://www.credly.com/badges/4f03304b-5486-4293-b961-770821b0233a/public_url" class="project-link" target="_blank" rel="noopener noreferrer">View Credential &rarr;</a>
-            </div>
-          </li>
-          <li class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-date">September 2021 &ndash; Present</span>
-              <h3>BS in Information Technology</h3>
-              <p>
-                De La Salle University - Manila. Coursework and projects spanning
-                full-stack web development, cloud computing, and network engineering.
+            <div class="timeline-card">
+              <h3 class="timeline-role">Event Organizer &amp; Technical Coordinator</h3>
+              <p class="timeline-summary">
+                Managed attendee entrance logistics and registration workflows for an educational technology conference. Represented RaksoCT to demonstrate educational tech solutions to delegates and coordinated on-site technical operations.
               </p>
+              <div class="timeline-highlights">
+                <span class="highlight-chip">Event Logistics</span>
+                <span class="highlight-chip">Client Representation</span>
+                <span class="highlight-chip">Stakeholder Communication</span>
+              </div>
             </div>
-          </li>
-        </ol>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section" aria-labelledby="contact-heading">
+    <!-- SECTION: CERTIFICATIONS & CREDENTIALS -->
+    <section id="certifications" class="section" aria-labelledby="certifications-heading">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">05 — Contact</span>
-          <h2 id="contact-heading">Let's Build Something</h2>
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">05 // Verified Credentials</span>
+            <h2 id="certifications-heading">Industry Certifications</h2>
+          </div>
+          <p class="section-lead">
+            Standardized third-party credentials verified through Cisco and Amazon Web Services (AWS).
+          </p>
         </div>
-        <div class="contact-grid reveal">
-          <div class="contact-info">
-            <p>
-              Have a project in mind or just want to say hello? My inbox is always open.
+
+        <div class="credentials-grid reveal" id="credentials-grid">
+          <!-- Cert 1: CCNA -->
+          <div class="credential-card" id="cert-ccna">
+            <div class="cert-header">
+              <div class="cert-issuer-badge cisco">CISCO</div>
+              <span class="cert-date">Sep 1, 2025</span>
+            </div>
+            <h3 class="cert-title">CCNA: Enterprise Networking, Security, and Automation</h3>
+            <p class="cert-desc">
+              Validates core competencies in enterprise routing &amp; switching, IP services, cybersecurity fundamentals, network assurance, and programmable network automation.
             </p>
-            <a class="contact-email" href="mailto:dylanakia2002@gmail.com">dylanakia2002@gmail.com</a>
-            <ul class="contact-list">
-              <li>
-                <span class="contact-label">Phone</span>
-                <a href="tel:+639999946734">0999 994 6734</a>
-              </li>
-              <li>
-                <span class="contact-label">Location</span>
-                <span>Makati City, Philippines</span>
-              </li>
-              <li>
-                <span class="contact-label">GitHub</span>
-                <a href="https://github.com/OatiesMilk" target="_blank" rel="noopener noreferrer">github.com/OatiesMilk</a>
-              </li>
-              <li>
-                <span class="contact-label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/dylan-akia47/" target="_blank" rel="noopener noreferrer">linkedin.com/in/dylan-akia47</a>
-              </li>
-            </ul>
+            <div class="cert-footer">
+              <span class="cert-provider">Verified Credly Credential</span>
+              <a href="https://www.credly.com/badges/4f03304b-5486-4293-b961-770821b0233a/public_url" class="btn-cert-link" target="_blank" rel="noopener noreferrer">
+                <span>View on Credly</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
           </div>
 
-          <form id="contact-form" class="contact-form" action="https://formspree.io/f/mljezadw" method="POST" novalidate>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error">
-              <span class="error-message" id="name-error"></span>
+          <!-- Cert 2: AWS Academy -->
+          <div class="credential-card" id="cert-aws-academy">
+            <div class="cert-header">
+              <div class="cert-issuer-badge aws">AWS ACADEMY</div>
+              <span class="cert-date">Nov 11, 2025</span>
+            </div>
+            <h3 class="cert-title">AWS Academy Graduate — Cloud Foundations</h3>
+            <p class="cert-desc">
+              Comprehensive training in AWS Cloud concepts, compute services (EC2), security and compliance models, cloud economics, billing structures, and architecture best practices.
+            </p>
+            <div class="cert-footer">
+              <span class="cert-provider">Verified Credly Credential</span>
+              <a href="https://www.credly.com/badges/e43e073c-1d2e-49d6-97bc-ea11374dd665/public_url" class="btn-cert-link" target="_blank" rel="noopener noreferrer">
+                <span>View on Credly</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: AWS Cloud Quest -->
+          <div class="credential-card" id="cert-aws-quest">
+            <div class="cert-header">
+              <div class="cert-issuer-badge aws">AWS QUEST</div>
+              <span class="cert-date">Oct 4, 2025</span>
+            </div>
+            <h3 class="cert-title">AWS Cloud Quest: Cloud Practitioner</h3>
+            <p class="cert-desc">
+              Hands-on practical validation solving cloud architectural challenges including Amazon S3 object storage, VPC networking, security groups, and highly available application tiers.
+            </p>
+            <div class="cert-footer">
+              <span class="cert-provider">Verified Credly Credential</span>
+              <a href="https://www.credly.com/badges/5cd3c038-7e81-4d15-a219-0a3e3f4ff37d/public_url" class="btn-cert-link" target="_blank" rel="noopener noreferrer">
+                <span>View on Credly</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACT & CONNECT -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-title-wrap">
+            <span class="section-eyebrow">06 // Connect &amp; Collaborate</span>
+            <h2 id="contact-heading">Let's Build Together</h2>
+          </div>
+          <p class="section-lead">
+            Seeking opportunities to contribute to dynamic software, network, and cloud engineering teams.
+          </p>
+        </div>
+
+        <div class="contact-card-wrapper reveal">
+          <div class="contact-grid">
+            <!-- Left Info Panel -->
+            <div class="contact-info-panel">
+              <div class="contact-pitch">
+                <h3>Open for Internships &amp; Entry-Level Engineering Roles</h3>
+                <p>
+                  Whether you have an internship opening, a technical question about my projects, or want to discuss enterprise network design or Laravel web engineering, my inbox is always open.
+                </p>
+              </div>
+
+              <!-- Direct Action Link -->
+              <div class="email-direct-box">
+                <span class="box-label">Primary Email</span>
+                <a href="mailto:dylanakia2002@gmail.com" class="direct-email-link" id="direct-email-cta">
+                  <span>dylanakia2002@gmail.com</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+                </a>
+              </div>
+
+              <!-- Verified Channels -->
+              <ul class="contact-points">
+                <li>
+                  <div class="point-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="point-label">Mobile Phone</span>
+                    <a href="tel:+639999946734" class="point-val">0999 994 6734</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="point-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <span class="point-label">Location</span>
+                    <span class="point-val">Makati City &bull; Metro Manila, Philippines</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="point-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </div>
+                  <div>
+                    <span class="point-label">GitHub</span>
+                    <a href="https://github.com/OatiesMilk" target="_blank" rel="noopener noreferrer" class="point-val">github.com/OatiesMilk</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="point-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  </div>
+                  <div>
+                    <span class="point-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/dylan-akia47/" target="_blank" rel="noopener noreferrer" class="point-val">linkedin.com/in/dylan-akia47</a>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error">
-              <span class="error-message" id="email-error"></span>
-            </div>
+            <!-- Right Contact Form -->
+            <div class="contact-form-panel">
+              <form id="contact-form" class="contact-form" action="https://formspree.io/f/mljezadw" method="POST" novalidate>
+                <div class="form-header">
+                  <h4>Send a Message</h4>
+                  <p>Inquiries are routed directly to my personal inbox.</p>
+                </div>
 
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" aria-describedby="message-error"></textarea>
-              <span class="error-message" id="message-error"></span>
-            </div>
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Jane Doe" required aria-describedby="name-error">
+                  <span class="error-message" id="name-error" role="alert"></span>
+                </div>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
-          </form>
+                <div class="form-group">
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.com" required aria-describedby="email-error">
+                  <span class="error-message" id="email-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message / Opportunity Details <span class="required">*</span></label>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell me about your team, internship opportunity, or project..." required aria-describedby="message-error"></textarea>
+                  <span class="error-message" id="message-error" role="alert"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit" id="contact-submit-btn">
+                  <span>Send Message</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+
+                <p class="form-success" id="form-success" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Site Footer -->
+  <footer class="site-footer" id="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="current-year"></span> Dylan Akia. All rights reserved.</p>
-      <ul class="social-links">
-        <li><a href="https://github.com/OatiesMilk" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/dylan-akia47/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
-        <li><a href="mailto:dylanakia2002@gmail.com" aria-label="Send an email">Email</a></li>
-      </ul>
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">Dylan<span>.</span>Akia</a>
+        <p class="footer-bio">BS Information Technology &bull; De La Salle University - Manila</p>
+      </div>
+
+      <div class="footer-right">
+        <ul class="social-links" aria-label="Social and professional links">
+          <li><a href="https://github.com/OatiesMilk" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/dylan-akia47/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a></li>
+          <li><a href="mailto:dylanakia2002@gmail.com" aria-label="Email Dylan Akia">Email</a></li>
+          <li><a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Resume PDF">Resume</a></li>
+        </ul>
+        <p class="copyright">&copy; <span id="current-year"></span> Dylan Lee B. Akia. Built with modern HTML5, CSS3, &amp; Vanilla JS.</p>
+      </div>
     </div>
   </footer>
 
-  <button id="scroll-top" class="scroll-top" aria-label="Scroll back to top" hidden>&uarr;</button>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll back to top of page" hidden type="button">&uarr;</button>
 
   <script src="js/script.js"></script>
 </body>
 </html>
+

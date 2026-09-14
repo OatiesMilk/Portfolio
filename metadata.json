@@ -1,0 +1,8 @@
+{
+  "name": "Dylan Akia Portfolio",
+  "description": "Portfolio of Dylan Akia, a BS Information Technology student at De La Salle University - Manila, building web, cloud, and network projects with Laravel, PHP, AWS, and Cisco Packet Tracer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

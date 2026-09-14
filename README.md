@@ -76,16 +76,19 @@ Everything lives in plain, readable HTML — no templating engine, no data files
 
 ## How to Deploy
 
-This site is deployed on **Vercel**. Full instructions (connecting the repo, the CLI
-flow, custom domains, and alternatives like GitHub Pages/Netlify) are in
-[docs/05-deployment.md](docs/05-deployment.md). Short version:
+Full instructions (Git setup, GitHub repository, GitHub Pages, and alternatives like
+Netlify/Vercel) are in [docs/05-deployment.md](docs/05-deployment.md). Short version:
 
-1. Push the repo to GitHub.
-2. Import it at [vercel.com](https://vercel.com) → **Add New → Project**.
-3. Leave the framework preset as **Other** (no build step needed) and deploy.
+```bash
+git init
+git add .
+git commit -m "Initial commit: personal portfolio site"
+git remote add origin https://github.com/<your-username>/portfolio.git
+git branch -M main
+git push -u origin main
+```
 
-Every push to `main` auto-deploys to production; every other branch/PR gets its own
-preview URL.
+Then enable GitHub Pages on the repo (Settings → Pages → Deploy from branch `main`).
 
 ## Future Improvements
 

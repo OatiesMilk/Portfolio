@@ -1,8 +1,8 @@
 # 05 — Deployment
 
-This is a fully static site (HTML, CSS, JS — no build step, no server), so it can be
-deployed to almost any free static host. Steps below use GitHub Pages as the primary
-example, since it pairs directly with the GitHub repo setup.
+This is a fully static site (HTML, CSS, JS — no build step, no server), deployed on
+**Vercel**. Vercel serves the repo root as-is (framework preset "Other" / zero-config),
+so no build command or output directory is needed.
 
 ## 1. Local Development
 
@@ -16,7 +16,13 @@ normal desktop browser.
 
 **Option B — serve it locally (recommended)**
 
-If you have Node.js installed:
+If you have the Vercel CLI installed:
+
+```bash
+npx vercel dev
+```
+
+Or with Node.js:
 
 ```bash
 npx serve .
@@ -32,50 +38,48 @@ python -m http.server 5500
 
 Then open `http://localhost:5500`.
 
-## 2. Git Initialization
+## 2. Deploy to Vercel
 
-From the project folder:
+### Option A — Connect the GitHub repo (recommended)
+
+1. Go to [vercel.com](https://vercel.com) and sign in (GitHub login works directly).
+2. Click **Add New → Project**, then import this GitHub repository.
+3. Framework preset: leave as **Other** (no build step). Build command and output
+   directory can stay empty — Vercel serves the repo root.
+4. Click **Deploy**. Vercel publishes the site at a generated
+   `https://<project-name>.vercel.app` URL immediately.
+5. Every push to `main` (or your default branch) automatically triggers a production
+   redeploy. Every push to any other branch/PR gets its own **preview URL** — useful for
+   checking changes before merging.
+
+### Option B — Vercel CLI
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit: personal portfolio site"
+npm i -g vercel
+vercel login
+vercel        # deploys a preview
+vercel --prod # deploys to production
 ```
 
-## 3. Create a GitHub Repository
+### Configuration
 
-1. Go to GitHub and create a new repository (e.g. `portfolio`).
-2. Do **not** initialize it with a README (you already have one locally).
-3. Connect your local repo and push:
+`vercel.json` in the repo root sets:
+- `cleanUrls` — allows `/about` instead of `/about.html` if extra pages are ever added.
+- Long-lived cache headers on `assets/` (images, resume PDF) since those files rarely
+  change and benefit from aggressive caching.
 
-```bash
-git remote add origin https://github.com/<your-username>/portfolio.git
-git branch -M main
-git push -u origin main
-```
+No environment variables or secrets are required — this site has no backend.
 
-## 4. Deploy with GitHub Pages
+## 3. Custom Domain (optional)
 
-1. In your GitHub repository, go to **Settings → Pages**.
-2. Under "Build and deployment", set **Source** to "Deploy from a branch".
-3. Set **Branch** to `main` and folder to `/ (root)`.
-4. Save. GitHub will publish the site at:
-   `https://<your-username>.github.io/<repository-name>/`
-5. It can take a minute or two for the first deployment to go live.
+In the Vercel project dashboard: **Settings → Domains → Add**. Point your domain's DNS
+at Vercel per the instructions shown (usually a CNAME or A record). Vercel provisions
+HTTPS automatically.
 
-### Alternative static hosts
+If you add a custom domain, update the `og:url` / `og:image` / `twitter:image` meta
+tags in `index.html` (currently pointing at the GitHub Pages URL) to match.
 
-Any of these also work well for a static HTML/CSS/JS site (drag-and-drop or connect
-your GitHub repo):
-
-- **Netlify** — drag the project folder onto the Netlify dashboard, or connect the repo
-  for automatic redeploys on every push.
-- **Vercel** — import the GitHub repo; no build command needed (framework preset:
-  "Other").
-- **Cloudflare Pages** — connect the repo, leave the build command empty, set the
-  output directory to `/`.
-
-## 5. Updating the Website
+## 4. Updating the Website
 
 Whenever you change content (bio, projects, skills, contact info, etc.):
 
@@ -85,17 +89,17 @@ git commit -m "Update portfolio content"
 git push
 ```
 
-- **GitHub Pages** redeploys automatically a short time after the push.
-- **Netlify / Vercel / Cloudflare Pages** (if connected to the repo) redeploy
-  automatically on every push as well.
+Vercel redeploys automatically a few seconds after the push, and comments the deploy
+URL directly on the corresponding commit/PR.
 
-## 6. Contact Form (Formspree)
+## 5. Contact Form (Formspree)
 
 The contact form in `#contact` is wired to [Formspree](https://formspree.io), a free
 form-handling service — no backend code required. The form's `action` attribute in
 `index.html` points at a Formspree endpoint, and `js/script.js` runs the existing
 client-side validation first, then submits via `fetch()` so the page shows an inline
-success/error message instead of redirecting.
+success/error message instead of redirecting. This works identically on Vercel — no
+changes needed for the migration.
 
 To point the form at a different Formspree account (e.g., if you fork this project):
 
@@ -107,3 +111,14 @@ To point the form at a different Formspree account (e.g., if you fork this proje
 
 Formspree's free tier caps at 50 submissions/month and requires confirming your first
 real submission via a link they email you; after that it's fully automatic.
+
+## Alternative static hosts
+
+Since this is a plain static site, it also works well on:
+
+- **GitHub Pages** — Settings → Pages → Deploy from a branch (`main`, `/root`). Publishes
+  at `https://<username>.github.io/<repo>/`.
+- **Netlify** — drag the project folder onto the dashboard, or connect the repo for
+  automatic redeploys on every push.
+- **Cloudflare Pages** — connect the repo, leave the build command empty, set the
+  output directory to `/`.

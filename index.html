@@ -121,7 +121,15 @@
           </div>
         </div>
         <div class="hero-photo">
-          <img src="assets/images/profile_picture.jpg" alt="Profile Picture" class="avatar">
+          <img
+            src="assets/images/profile_picture.jpg"
+            alt="Profile Picture"
+            class="avatar"
+            width="320"
+            height="320"
+            decoding="async"
+            fetchpriority="high"
+          >
         </div>
       </div>
     </section>
@@ -235,10 +243,19 @@
           <li class="project-row reveal">
             <div class="project-media" aria-hidden="true">
               <svg viewBox="0 0 400 300" role="presentation">
+                <defs>
+                  <pattern id="grid-01" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="1" fill="#0f766e" opacity="0.12"/>
+                  </pattern>
+                </defs>
                 <rect width="400" height="300" fill="#dbeafe"/>
-                <rect x="40" y="80" width="320" height="140" rx="8" fill="#0f766e" opacity="0.85"/>
-                <circle cx="80" cy="110" r="10" fill="#fff"/>
-                <rect x="110" y="103" width="220" height="14" rx="4" fill="#fff" opacity="0.8"/>
+                <rect width="400" height="300" fill="url(#grid-01)"/>
+                <rect x="40" y="72" width="320" height="156" rx="10" fill="#0f766e" opacity="0.9"/>
+                <circle cx="82" cy="106" r="11" fill="#fff" opacity="0.95"/>
+                <rect x="112" y="99" width="200" height="14" rx="4" fill="#fff" opacity="0.85"/>
+                <rect x="70" y="140" width="260" height="10" rx="4" fill="#fff" opacity="0.4"/>
+                <rect x="70" y="160" width="200" height="10" rx="4" fill="#fff" opacity="0.4"/>
+                <rect x="70" y="190" width="100" height="24" rx="6" fill="#fff" opacity="0.75"/>
               </svg>
             </div>
             <div class="project-copy">
@@ -261,10 +278,23 @@
           <li class="project-row reveal">
             <div class="project-media" aria-hidden="true">
               <svg viewBox="0 0 400 300" role="presentation">
+                <defs>
+                  <pattern id="grid-02" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="1" fill="#0f766e" opacity="0.12"/>
+                  </pattern>
+                </defs>
                 <rect width="400" height="300" fill="#dcfce7"/>
-                <rect x="40" y="60" width="140" height="180" rx="8" fill="#0f766e" opacity="0.85"/>
-                <rect x="200" y="60" width="160" height="85" rx="8" fill="#0f766e" opacity="0.6"/>
-                <rect x="200" y="155" width="160" height="85" rx="8" fill="#0f766e" opacity="0.6"/>
+                <rect width="400" height="300" fill="url(#grid-02)"/>
+                <line x1="120" y1="105" x2="230" y2="80" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
+                <line x1="120" y1="150" x2="230" y2="150" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
+                <line x1="120" y1="195" x2="230" y2="220" stroke="#0f766e" stroke-width="2" opacity="0.55"/>
+                <circle cx="100" cy="150" r="34" fill="#0f766e" opacity="0.9"/>
+                <circle cx="260" cy="80" r="24" fill="#0f766e" opacity="0.65"/>
+                <circle cx="260" cy="150" r="24" fill="#0f766e" opacity="0.65"/>
+                <circle cx="260" cy="220" r="24" fill="#0f766e" opacity="0.65"/>
+                <rect x="315" y="70" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
+                <rect x="315" y="140" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
+                <rect x="315" y="210" width="55" height="22" rx="5" fill="#0f766e" opacity="0.35"/>
               </svg>
             </div>
             <div class="project-copy">
@@ -288,8 +318,18 @@
           <li class="project-row reveal">
             <div class="project-media" aria-hidden="true">
               <svg viewBox="0 0 400 300" role="presentation">
+                <defs>
+                  <pattern id="grid-03" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="1" fill="#c2681a" opacity="0.14"/>
+                  </pattern>
+                </defs>
                 <rect width="400" height="300" fill="#fef3c7"/>
-                <circle cx="120" cy="150" r="65" fill="#c2681a" opacity="0.8"/>
+                <rect width="400" height="300" fill="url(#grid-03)"/>
+                <rect x="70" y="95" width="110" height="110" rx="10" fill="#c2681a" opacity="0.25"/>
+                <circle cx="125" cy="150" r="46" fill="none" stroke="#c2681a" stroke-width="4" opacity="0.85"/>
+                <circle cx="125" cy="150" r="14" fill="#c2681a" opacity="0.9"/>
+                <line x1="125" y1="104" x2="125" y2="115" stroke="#c2681a" stroke-width="4" opacity="0.7"/>
+                <line x1="125" y1="185" x2="125" y2="196" stroke="#c2681a" stroke-width="4" opacity="0.7"/>
                 <rect x="210" y="105" width="150" height="16" rx="8" fill="#c2681a" opacity="0.6"/>
                 <rect x="210" y="140" width="120" height="16" rx="8" fill="#c2681a" opacity="0.4"/>
                 <rect x="210" y="175" width="90" height="16" rx="8" fill="#c2681a" opacity="0.3"/>

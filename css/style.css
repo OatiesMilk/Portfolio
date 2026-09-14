@@ -2130,6 +2130,10 @@ strong {
     display: flex;
   }
 
+  .btn-header-resume {
+    display: none;
+  }
+
   .nav-menu {
     position: fixed;
     top: var(--header-height);
